@@ -88,9 +88,28 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    console.log("Sort the people alphabetially by last name");
+    console.log(inventors.sort((a,b) => {
+      if (a.last > b.last){
+        return 1;
+      }      
+      else{
+        return -1;
+      }
+    }))
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    console.log("Sum up the instances of each of these");
+    console.log(data.reduce((initialVal, currentValue) => {
+      if (!initialVal[currentValue]){
+        initialVal[currentValue] = 0;
+      }
+      initialVal[currentValue] ++;
+      return initialVal;
+    }, {}))
 
   </script>
 </body>
